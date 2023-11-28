@@ -1,5 +1,6 @@
 const request = require("supertest");
-
+const database = require("../database");
+afterAll(() => database.end());
 const app = require("../src/app");
 
 describe("GET /api/users", () => {
